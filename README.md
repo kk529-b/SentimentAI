@@ -83,8 +83,6 @@ Google Colab上で構築したモデルを、ローカル環境で再現可能�
   ```
   学習が完了すると、outputs/ ディレクトリに学習済みモデルが保存されます。
 
-  必要に応じて引数でハイパーパラメータや出力先を指定できます。
-
 - **推論 / 評価**
   ```bash
   python src/predict.py --model_dir outputs
