@@ -6,7 +6,7 @@ import torch.nn as nn
 import torch.optim as optim
 from tqdm import tqdm
 
-from data import prepare_dataloaders
+from dataset import prepare_dataloaders
 from model import SentimentClassifier
 
 

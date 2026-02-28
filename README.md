@@ -24,18 +24,16 @@ Google Colab上で構築したモデルを、ローカル環境で再現可能�
 
 ---
 
-## 🏗 ディレクトリ構成
+## 📂 ディレクトリ構成
 
-```
+```text
 .
-├── data/               # データ保存ディレクトリ
 ├── src/
-│   ├── dataset.py      # Dataset定義
+│   ├── dataset.py      # データセット準備
 │   ├── model.py        # モデル定義
-│   ├── train.py        # 学習処理
-│   ├── evaluate.py     # 評価処理
-│   └── utils.py        # 補助関数
-├── main.py             # CLI実行エントリポイント
+│   ├── train.py        # 学習スクリプト
+│   └── predict.py      # 推論スクリプト
+├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
@@ -77,15 +75,22 @@ Google Colab上で構築したモデルを、ローカル環境で再現可能�
 
 ## ▶️ 実行方法
 
+プロジェクトルートから `src` フォルダ内のスクリプトを直接実行します。
+
 - **学習**
   ```bash
-  python main.py --mode train
+  python src/train.py
   ```
+  学習が完了すると、outputs/ ディレクトリに学習済みモデルが保存されます。
 
-- **評価**
+  必要に応じて引数でハイパーパラメータや出力先を指定できます。
+
+- **推論 / 評価**
   ```bash
-  python main.py --mode eval
+  python src/predict.py --model_dir outputs
   ```
+  起動後に表示される入力欄に英文レビューを入力すると、
+  予測結果（Positive / Negative）が表示されます。
 
 ---
 
