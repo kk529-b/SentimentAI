@@ -16,3 +16,4 @@ __pycache__/
 # OS系
 .DS_Store
 Thumbs.db
+desktop.ini
